@@ -14,7 +14,7 @@ def home():
         note = request.form.get('note')
 
         if len(note) < 1:
-            flash('Note Çok kısa!', category='error')
+            flash('Not Çok kısa!', category='error')
         else:
             new_note = Note(data=note, user_id=current_user.id)
             db.session.add(new_note)
